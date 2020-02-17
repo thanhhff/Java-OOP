@@ -13,4 +13,8 @@ public class Student {
         this.height = height;
         total += 1;
     }
+
+    public static void getInfoUniversity() {
+        System.out.println(universityName);
+    }
 }
