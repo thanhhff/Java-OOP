@@ -2,21 +2,19 @@ package mypack;
 
 public class Person {
     public String name;
-    int age;
+    public int age;
     public float height;
 
     public Person(String name, int age, float height) {
-        this.name = name + "hff";
+        this.name = name;
         this.age = age;
         this.height = height;
-
+//        this.getInfo();
     }
 
-    public void eat(String foodName) {
-        System.out.println(name + " is eating " + foodName);
-    }
-
-    public int getAge() {
-        return age;
+    public void getInfo() {
+        System.out.println("Name:" + this.name);
+        System.out.println("Age:" + this.age);
+        System.out.println("Height:" + this.height);
     }
 }
