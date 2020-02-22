@@ -24,16 +24,6 @@ public class Complex {
         return phanAo;
     }
 
-//    public void setComplex(Complex cmp) {
-//        this.phanThuc = cmp.phanThuc;
-//        this.phanAo = cmp.phanAo;
-//    }
-//
-//    public Complex getComplex() {
-//        Complex cmp = new Complex(this.phanThuc, this.phanAo);
-//        return cmp;
-//    }
-
     // Không tham số
     public Complex() {
         this.phanThuc = 0;
