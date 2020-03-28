@@ -85,8 +85,28 @@ public class MyDate {
         System.out.println(day + " " + month + " " + getNam());
     }
 
-    public void hienThiDinhDang() {
-        System.out.println("Dinh dang kieu MM/dd/yyyy: " + getThang() + "/" + getNgay() + "/" + getNam());
+    public void hienThiNgayHienTai() {
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        String strDate = formatter.format(date);
+        System.out.println("Dinh dang MM/dd/yyyy: " + strDate);
+
+        formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+        strDate = formatter.format(date);
+        System.out.println("Dinh dang dd-M-yyyy hh:mm:ss: " + strDate);
+
+        formatter = new SimpleDateFormat("dd MMMM yyyy");
+        strDate = formatter.format(date);
+        System.out.println("Dinh dang dd MMMM yyyy: " + strDate);
+
+        formatter = new SimpleDateFormat("dd MMMM yyyy zzzz");
+        strDate = formatter.format(date);
+        System.out.println("Dinhg dang dd MMMM yyyy zzzz: " + strDate);
+
+        formatter = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss z");
+        strDate = formatter.format(date);
+        System.out.println("Dinh dang E, dd MMM yyyy HH:mm:ss z: " + strDate);
+
     }
 
     public int getNgay() {
