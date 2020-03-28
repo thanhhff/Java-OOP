@@ -85,7 +85,7 @@ public class MyDate {
         System.out.println(day + " " + month + " " + getNam());
     }
 
-    public void hienThiNgayHienTai() {
+    public static void hienThiNgayHienTai() {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         String strDate = formatter.format(date);

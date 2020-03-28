@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class DateUtils {
 
-    public static void compareDate(String a, String b) {
+    public static int compareDate(String a, String b) {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         Date date1 = null;
         Date date2 = null;
@@ -26,8 +26,25 @@ public class DateUtils {
             e.printStackTrace();
         }
 
-        System.out.println(date1);
-        System.out.println(date2);
+        assert date1 != null;
+        assert date2 != null;
+        if (date1.compareTo(date2) > 0) {
+            return 1;
+        } else if (date1.compareTo(date2) < 0) {
+            return -1;
+        }
+        return 0;
+    }
 
+    public static void sortingDate(String[] date) {
+        for (int i = 0; i < date.length - 1; i++) {
+            for (int j = i + 1; j < date.length; j++) {
+                if (compareDate(date[i], date[j]) == 1) {
+                    String tmp = date[i];
+                    date[i] = date[j];
+                    date[j] = tmp;
+                }
+            }
+        }
     }
 }
