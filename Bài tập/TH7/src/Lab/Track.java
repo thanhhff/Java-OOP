@@ -1,6 +1,6 @@
 package Lab;
 
-public class Track {
+public class Track implements Playable{
 
     private String title;
     private int length;
@@ -22,5 +22,12 @@ public class Track {
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    @Override
+    public void play() {
+        System.out.println("Track title: " + this.getTitle());
+        System.out.println("Track length: " + this.getLength());
+
     }
 }
