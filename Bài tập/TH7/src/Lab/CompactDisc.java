@@ -26,10 +26,8 @@ public class CompactDisc extends Disc implements Playable {
     }
 
     public int getLength() {
-
         int length = 0;
         Track trackItem;
-
         for (Track track : tracks) {
             trackItem = track;
             length += trackItem.getLength();
@@ -47,6 +45,11 @@ public class CompactDisc extends Disc implements Playable {
 
     @Override
     public void play() {
+        for (Track track : tracks) {
+            System.out.println("Track title: " + track.getTitle()
+                    + " - Track lenght: " + track.getLength());
+        }
+
         // Tổng của các Track: thời lượng thật của DVD đó !
         System.out.println("Length: " + getLength());
     }

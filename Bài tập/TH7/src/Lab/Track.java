@@ -1,6 +1,6 @@
 package Lab;
 
-public class Track implements Playable{
+public class Track implements Playable {
 
     private String title;
     private int length;
@@ -28,6 +28,5 @@ public class Track implements Playable{
     public void play() {
         System.out.println("Track title: " + this.getTitle());
         System.out.println("Track length: " + this.getLength());
-
     }
 }

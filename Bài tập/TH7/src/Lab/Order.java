@@ -22,6 +22,16 @@ public class Order {
         }
     }
 
+    public void showInformation() {
+        int i = 1;
+        for (Media media : itemsOrdered) {
+            System.out.println("ID: " + i);
+            System.out.println("Title: " + media.getTitle());
+            System.out.println("Category: " + media.getCategory());
+            System.out.println("Cost: " + media.getCost());
+            i = i + 1;
+        }
+    }
 
     public float totalCost() {
         // store the number of discs currently in the order
