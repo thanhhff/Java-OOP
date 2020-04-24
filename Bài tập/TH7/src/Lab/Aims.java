@@ -22,7 +22,6 @@ public class Aims {
     public static void main(String[] args) {
 
         int choose;
-        ArrayList<Media> itemsOrdered = new ArrayList<Media>();
 
         Scanner sc = new Scanner(System.in);
 
